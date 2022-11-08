@@ -1,12 +1,17 @@
 ﻿@{
     ViewData["Title"] = "details";
 }
+
+<div class="text-center d-flex justify-content-center  align-items-center card-group ">
+
 <img src="@Model.sprites.other.dream_world.front_default" class="img-fluid" alt="@Model.name">
 
-<ul>
-    @foreach (var ability in Model.abilities)
-    {
-        <li>@ability.ability.name</li>
-    }
-</ul>
+
+</div>
+
+@foreach (var ability in Model.abilities)
+{
+    <p class="text-center">@ability.ability.name</p>
+}
+
 

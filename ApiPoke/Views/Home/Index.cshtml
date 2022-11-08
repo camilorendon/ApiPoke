@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center d-flex justify-content-center align-items-center">
+<div class="text-center d-flex justify-content-center  align-items-center card-group ">
     <a asp-controller="Login" asp-action="login">Login</a>
     <a asp-controller="Login" asp-action="register">Register</a>
 
@@ -11,13 +11,13 @@
         @foreach (var pokemon in Model.results)
         {
 
-          
+
             <a class="btn btn-primary m-2" asp-controller="Home" asp-action="details" asp-route-url="@pokemon.url">@pokemon.name</a>
             
         }
     </ul>
-    <a class="btn btn-success" asp-controller="Home" asp-action="Index" asp-route-url="@Model.next">next</a>
     <a class="btn btn-danger" asp-controller="Home" asp-action="Index" asp-route-url="@Model.previous">back</a>
+    <a class="btn btn-success" asp-controller="Home" asp-action="Index" asp-route-url="@Model.next">next</a>
 
 
 </div>
